@@ -1,9 +1,10 @@
- <?php 
-$host ="localhost"; 
-$user ="root"; 
-$pass =""; 
-$daba ="mahasiswa"; 
-
-mysql_select_db($daba) or die ("database tidak bisa dibuka"); 
-$sql="INSERT INTO mahasiswa(nama,nim,kelas,hobi,fakultas,alamat)VALUES ('$nama,')  " 
+<?php
+	$host	= 'localhost';
+	$user	= 'root';
+	$pass	= '';
+	$db	= 'mahasiswa';
+	$conn = mysqli_connect($host, $user, $pass, $db);
+	if (!$conn) {
+		die("Gagal terhubung dengan database: " . mysqli_connect_error());
+	}
 ?>
